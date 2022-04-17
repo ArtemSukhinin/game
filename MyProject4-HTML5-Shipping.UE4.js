@@ -1158,10 +1158,10 @@ $(document).ready(function() {
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/ArtemSukhinin/game/0664a62c5845b40c8752a877e8716f224a73191f/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.
-			fetchOrDownloadAndStore(db, Module.locateFile('MyProject4-HTML5-Shipping.data')).then(function(dataBlob) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://dl.dropboxusercontent.com/s/pdz0951abcm5qm4/MyProject4-HTML5-Shipping.data?dl=0')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('MyProject4-HTML5-Shipping.data')] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('https://dl.dropboxusercontent.com/s/pdz0951abcm5qm4/MyProject4-HTML5-Shipping.data?dl=0')] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});
